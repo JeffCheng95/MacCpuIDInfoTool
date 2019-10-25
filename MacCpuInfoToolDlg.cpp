@@ -409,11 +409,11 @@ void CMacCpuInfoToolDlg::OnBnClickedBtOpenfile()
 		filePath = "";
 	}
 	CString flName = filePath.Right(filePath.GetLength() - filePath.ReverseFind('\\') - 1);
-	if (flName == MacCpuFile)
+	if (/*flName == MacCpuFile*/ flName.CompareNoCase(_T(MacCpuFile)) == 0)
 	{
 		g_fileType = 1;
 	}
-	else if (flName == LiceFile)
+	else if (/*flName == LiceFile*/flName.CompareNoCase(_T(LiceFile)) == 0)
 	{
 		g_fileType = 2;
 	}
